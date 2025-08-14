@@ -1,3 +1,4 @@
+// https://leetcode.com/problems/power-of-four/description/
 #include <math.h>
 #include <stdbool.h>
 #include <stdio.h>
