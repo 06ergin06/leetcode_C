@@ -1,11 +1,11 @@
-#include <math.h>
 #include <stdbool.h>
 #include <stdio.h>
 
 int sumOfSquares(int n) {
     int res = 0;
     while (n > 0) {
-        res += pow(n % 10, 2);
+        int d = n % 10;
+        res += d * d;
         n /= 10;
     }
     return res;
