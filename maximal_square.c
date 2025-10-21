@@ -58,15 +58,20 @@ int	maximalSquare(char **matrix, int matrixSize, int *matrixColSize)
 	}
 	map_solver(nums, matrixSize, matrixColSize);
 	max = 0;
-	for (int i = 0; i < matrixSize; i++)
+	i = 0;
+	j = 0;
+	while (i < matrixSize)
 	{
-		for (int j = 0; j < matrixColSize[i]; j++)
+		j = 0;
+		while (j < matrixColSize[i])
 		{
 			if (nums[i][j] > max)
 			{
 				max = nums[i][j];
 			}
+			j++;
 		}
+		i++;
 	}
-    return max * max;
+	return (max * max);
 }
