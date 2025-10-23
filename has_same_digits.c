@@ -20,8 +20,3 @@ bool	hasSameDigits(char *s)
 	}
 	return (s[0] == s[1]);
 }
-
-int	main(void)
-{
-	hasSameDigits("5913");
-}
