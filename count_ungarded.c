@@ -1,7 +1,6 @@
 int	countUnguarded(int m, int n, int **guards, int guardsSize,
 		int *guardsColSize, int **walls, int wallsSize, int *wallsColSize)
 {
-	int	**grid;
 	int	i;
 	int	j;
 	int	x;
@@ -9,13 +8,7 @@ int	countUnguarded(int m, int n, int **guards, int guardsSize,
 	int	res;
 
 	res = m * n;
-	grid = (int **)calloc(m, sizeof(int *));
-	i = 0;
-	while (i < m)
-	{
-		grid[i] = (int *)calloc(n, sizeof(int));
-		i++;
-	}
+	int(*grid)[n] = calloc(m, sizeof *grid);
 	i = 0;
 	while (i < guardsSize)
 	{
@@ -95,12 +88,6 @@ int	countUnguarded(int m, int n, int **guards, int guardsSize,
 			}
 			j++;
 		}
-		i++;
-	}
-	i = 0;
-	while (i < m)
-	{
-		free(grid[i]);
 		i++;
 	}
 	free(grid);
