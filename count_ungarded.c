@@ -8,7 +8,7 @@ int	countUnguarded(int m, int n, int **guards, int guardsSize,
 	int	res;
 
 	res = m * n;
-	int(*grid)[n] = calloc(m, sizeof *grid);
+	unsigned int(*grid)[n] = calloc(m, sizeof *grid);
 	i = 0;
 	while (i < guardsSize)
 	{
